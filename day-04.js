@@ -14,7 +14,7 @@ function padIt(str, n) {
 // https://www.codewars.com/kata/5721a78c283129e416000999/train/javascript
 
 function pickIt(arr) {
-  let odd = [],
+  const odd = [],
     even = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] % 2) 
@@ -28,7 +28,7 @@ function pickIt(arr) {
 // https://www.codewars.com/kata/5721c189cdd71194c1000b9b/train/javascript
 
 function grabDoll(dolls) {
-  var bag = [];
+  const bag = [];
   for (let i = 0; i < dolls.length; i++) {
     if (dolls[i] === "Hello Kitty" || dolls[i] === "Barbie doll")
       bag.push(dolls[i]);
@@ -42,8 +42,8 @@ function grabDoll(dolls) {
 // https://www.codewars.com/kata/5722b3f0bd5583cf44001000/train/javascript
 
 function giveMeFive(obj) {
-  let five = [];
-  for (let key in obj) {
+  const five = [];
+  for (const key in obj) {
     if (key.length === 5) five.push(key);
     if (obj[key].length === 5) five.push(obj[key]);
   }
