@@ -2,7 +2,7 @@
 
 function cutIt(arr){
   let shortestLength = arr[0].length;
-  for(str of arr) {
+  for(const str of arr) {
     if (shortestLength > str.length) shortestLength = str.length;
   }
   for(let i = 0; i < arr.length; i++) {
