@@ -32,11 +32,11 @@ function topSecret(str) {
 // https://www.codewars.com/kata/5729b103dd8bac11a900119e
 
 function fiveLine(s) {
-  s = s.trim();
-  const temp = s;
-  const result = [s];
+  const sTrimCopy = s.trim();
+  const result = [sTrimCopy];
+  let sTrimMultiple = sTrimCopy;
   for (let i = 1; i < 5; i++) {
-    result.push((s += temp));
+    result.push((sTrimMultiple += sTrimCopy));
   }
   return result.join("\n");
 }
