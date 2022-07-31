@@ -9,9 +9,7 @@ function match(candidate, job) {
           (skill.name === jobSkill.name ||
             jobSkill.substitutions.some((sub) => sub.name === skill.name)) &&
           jobSkill.idealYears <=
-            (skill.preference === "desired"
-              ? skill.experience * 1.5
-              : skill.experience)
+            skill.experience * (skill.preference === "desired" ? 1.5 : 1)
       )
   );
 }
