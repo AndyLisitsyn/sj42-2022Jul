@@ -1,4 +1,4 @@
-https://www.codewars.com/kata/573023c81add650b84000429/train/javascript
+// https://www.codewars.com/kata/573023c81add650b84000429/train/javascript
 
 function countGrade(scores) {
   return {
@@ -10,3 +10,20 @@ function countGrade(scores) {
     X: scores.filter((x) => x === -1).length,
   };
 }
+
+// https://www.codewars.com/kata/57308546bd9f0987c2000d07/train/javascript
+
+function mirrorImage(arr) {
+  let a;
+  let b;
+  if (
+    arr.some((x, i) => {
+      a = x;
+      b = arr[i + 1];
+      return a === parseInt(String(b).split("").reverse().join(""));
+    })
+  )
+    return [a, b];
+  return [-1, -1];
+}
+
