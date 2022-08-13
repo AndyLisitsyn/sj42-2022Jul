@@ -16,3 +16,21 @@ function blackAndWhite(arr) {
     ? "It's a black array"
     : "It's a white array";
 }
+
+// https://www.codewars.com/kata/5735956413c2054a680009ec/train/javascript
+
+function rndCode() {
+  return (
+    rndRange("ABCDEFGHIJKLM", 2) +
+    rndRange("0123456789", 4) +
+    rndRange("~!@#$%^&*", 2)
+  );
+}
+
+function rndRange(values, count) {
+  let range = "";
+  for (let i = 0; i < count; i++) {
+    range += values[~~(values.length * Math.random())];
+  }
+  return range;
+}
